@@ -2,8 +2,12 @@
   "name": "projeto",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "styled-components": "^5.3.5"
-  }
+  "script": 
+  {
+    "dev": "adonis serve",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Lucas de Souza Santos",
+  "license": "MIT"
 }
