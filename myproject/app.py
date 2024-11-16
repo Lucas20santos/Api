@@ -1,15 +1,12 @@
-from flask import Flask, url_for # type: ignore
-from flask import render_template # type: ignore
+from flask import Flask, url_for, render_template # type: ignore
 
-app = Flask(__name__)
+
+app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
-def index():
-    return render_template('index.hmtl')
+def index_page():
+    return render_template('index.html')
 
-
-@app.route("/login", methods=["GET", "POST"])
-def hello_world():
-    return "<p>Page Login</p>"
-
-# url_for('static', filename='style.css')
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    return render_template('pages/login.html')
